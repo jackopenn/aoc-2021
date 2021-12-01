@@ -12,3 +12,7 @@ for i in range(1, len(nums)):
         count += 1
 
 print(count)
+
+
+result = len([i for i in range(1, len(nums)) if nums[i] > nums[i-1]])
+print(result)
