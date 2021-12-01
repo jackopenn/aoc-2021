@@ -1,1 +1,0 @@
-test x = x*x
