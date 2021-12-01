@@ -14,7 +14,7 @@ for i in range(1, len(nums)):
 print(count)
 
 # one line
-part1 = len([i for i in range(1, len(nums)) if nums[i] > nums[i-1]])
-part2 = len([i for i in range(3, len(nums)) if sum(nums[i-2:i+1]) > sum(nums[i-3:i])])
-print(part1)
-print(part2)
+# part1 = len([i for i in range(1, len(nums)) if nums[i] > nums[i-1]])
+# part2 = len([i for i in range(3, len(nums)) if sum(nums[i-2:i+1]) > sum(nums[i-3:i])])
+# print(part1)
+# print(part2)
