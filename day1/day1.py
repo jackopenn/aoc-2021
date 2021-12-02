@@ -2,7 +2,7 @@ with open("day1/input.txt") as file:
     nums = [int(line) for line in file.readlines()]
 
 
-nums = [sum(nums[i-2:i+1]) for i in range(2, len(nums))] #part 2
+nums = [sum(nums[i-2:i+1]) for i in range(2, len(nums))]  # part 2
 
 count = 0
 
