@@ -14,6 +14,7 @@ for dir, v in nums:
     x, y, aim = upatePos(dir, int(v), x, y, aim)
 
 print(x,y, x*y)
+
 # 3.10
 # def updatePos2(dir,v,x,y,aim):
 #     match dir:
