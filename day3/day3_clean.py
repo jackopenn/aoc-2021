@@ -21,7 +21,7 @@ for i in range(len(nums[0])):
     outs.append("".join(out))
 
 gamma = int("".join(outs), 2)
-epsilon = pow(2,len(nums[0])) - gamma
+epsilon = pow(2,len(nums[0])) - gamma - 1
 
 print(gamma, epsilon, gamma*epsilon)
 
