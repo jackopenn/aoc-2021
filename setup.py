@@ -15,7 +15,7 @@ def main(day):
     session = requests.Session()
     resp = session.get(url,cookies=headers)
 
-    in_file = open("day" + day + "/input.txt", 'w')
+    in_file = open("day" + day + "/input", 'w')
     in_file.write(resp.text)
     in_file.close()
 
