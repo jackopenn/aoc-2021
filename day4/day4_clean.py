@@ -14,13 +14,13 @@ for v in values:
                     if board[i][j] == v:
                         board[i][j] = -1
 
-            if any([True for row in board if sum(row) == -5]) or \
-               any([True for col in zip(*board) if sum(col) == -5]):
+            if (any([True for row in board if sum(row) == -5]) 
+                or any([True for col in zip(*board) if sum(col) == -5])):
                 bingo_boards.append((v, board))
 
 
 def calc_score(board):
-    return sum([int(elem) for row in board for elem in row if elem != -1])
+    return sum([elem for row in board for elem in row if elem != -1])
 
 print(bingo_boards[0][0], calc_score(bingo_boards[0][1]), int(bingo_boards[0][0]) * calc_score(bingo_boards[0][1]))
 print(bingo_boards[-1][0], calc_score(bingo_boards[-1][1]), int(bingo_boards[-1][0]) * calc_score(bingo_boards[-1][1]))
