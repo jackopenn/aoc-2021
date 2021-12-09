@@ -11,7 +11,7 @@ cnt= 0
 nums = []
 for l, r in lines:
     print(l, r)
-    # poss = defaultdict(str)
+    # poss = defaultdict(str
     matches = defaultdict(set)
     while len(matches.keys()) != 10:
         for w in l:
