@@ -59,7 +59,7 @@ def astar(graph, source, target):
     while Q:
 
         u, dist_u = heapq.heappop(Q)
-        x, y = u
+
         if u == target:
             s = []
             if prev[u] != None or u == source:
@@ -77,7 +77,7 @@ def astar(graph, source, target):
             if alt < dist[v]:
                 dist[v] = alt
                 prev[v] = u
-                heapq.heappush(Q, (v, dist[v] + heuristic(i, j, x, y)))
+                heapq.heappush(Q, (v, dist[v] + heuristic(i, j, len(graph)-1, len(graph[0])-1)))
 
     return dist, prev
 

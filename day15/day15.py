@@ -1,5 +1,5 @@
 import numpy as np
-
+import cProfile
 with open("day15/input", 'r') as f:
     nums = [list(map(int, list(line.rstrip()))) for line in f.readlines()]
 
@@ -111,21 +111,25 @@ def dijkstra(graph, source, target):
     
     return dist, prev
 
-# print((len(nums)-1, len(nums[0])-1))
-dist, s = dijkstra(nums, (0,0), (len(nums)-1, len(nums[0])-1))
 
-print(dist)
-# s.reverse()
-# print(s)
+with cProfile.Profile() as pr:
+    # print((len(nums)-1, len(nums[0])-1))
+    dist, s = dijkstra(nums, (0,0), (len(nums)-1, len(nums[0])-1))
+
+    print(dist)
+    # s.reverse()
+    # print(s)
+
+pr.print_stats()
 
 
-# print((len(new_nums2)-1, len(new_nums2[0])-1))
-dist, s = dijkstra(new_nums2, (0,0), (len(new_nums2)-1, len(new_nums2[0])-1))
+# # print((len(new_nums2)-1, len(new_nums2[0])-1))
+# dist, s = dijkstra(new_nums2, (0,0), (len(new_nums2)-1, len(new_nums2[0])-1))
 
-print(dist)
-# s.reverse()
-# print(s)
+# print(dist)
+# # s.reverse()
+# # print(s)
 
-nums2 = new_nums2.copy()
-for i, j in s:
-    nums2[i][j] = 'X'
+# nums2 = new_nums2.copy()
+# for i, j in s:
+#     nums2[i][j] = 'X'
