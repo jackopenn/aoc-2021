@@ -374,4 +374,8 @@ def calc_mag(tree):
             return 3 * calc_mag(tree.left) + 2 * calc_mag(tree.right)
     return 0
 
-print(calc_mag(to_write))
+result = calc_mag(to_write)
+
+with open("day18/results", 'a') as f:
+    f.write(str(result))
+    f.write('\n')
