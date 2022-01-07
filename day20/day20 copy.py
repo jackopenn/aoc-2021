@@ -61,7 +61,7 @@ def do(image, pad):
                 # print(i, j, alg_index, alg_index_bianry, alg[alg_index_bianry])
 
     
-    # print_image(new_image)
+    print_image(new_image)
     return new_image
 
 steps=50
